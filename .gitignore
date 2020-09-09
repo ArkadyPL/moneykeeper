@@ -1,0 +1,13 @@
+# General
+/build/*
+
+
+# IntelliJ
+/.idea/codeStyles/*.xml
+/.idea/*.xml
+/.idea/.gitignore
+!/.idea/runConfigurations/.xml
+
+
+# Gradle
+/.gradle/*

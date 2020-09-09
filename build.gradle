@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'pl.arkady'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'pl.arkady.moneykeeper.App'
+}
+
+
+def junitVersion = '5.6.2'
+
+dependencies {
+    compile group: 'org.springframework', name: 'spring-context', version: '5.2.8.RELEASE'
+
+    testImplementation "org.junit.jupiter:junit-jupiter-params:$junitVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+}
+
+
+dependencies {
+
+}
+
+test {
+    useJUnitPlatform {
+        includeEngines 'junit-jupiter'
+    }
+}
