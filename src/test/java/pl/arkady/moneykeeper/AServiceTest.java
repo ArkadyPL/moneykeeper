@@ -1,19 +1,20 @@
 package pl.arkady.moneykeeper;
 
 import org.junit.jupiter.api.Test;
+import pl.arkady.moneykeeper.app.AService;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-class AppTest {
+class AServiceTest {
 
     @Test
     public void someMethod_shouldReturn() {
         // given
-        App app = new App();
+        AService aService = new AService(null);
 
         // when
-        int result = app.someMethod();
+        int result = aService.someMethod();
 
         // then
         assertThat(result, is(15));
